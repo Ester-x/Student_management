@@ -13,7 +13,7 @@ class StudentManager {
     private void loadStudents() {
         Random random = new Random();
 
-        // Create John Doe with random grades and absences
+       
         Student johnDoe = new Student("John Doe", "123");
         for (String course : Student.COURSES) {
             int randomGrade = 5 + random.nextInt(6);
@@ -23,7 +23,7 @@ class StudentManager {
         }
         students.add(johnDoe);
 
-        // Create Jane Smith with random grades and absences
+        
         Student janeSmith = new Student("Jane Smith", "456");
         for (String course : Student.COURSES) {
             int randomGrade = 5 + random.nextInt(6);
@@ -35,7 +35,7 @@ class StudentManager {
     }
 
     public void addStudent(Student student) {
-        // Check if a student with the same ID already exists
+       
         boolean studentExists = students.stream().anyMatch(s -> s.getId().equals(student.getId()));
 
         if (studentExists) {
@@ -86,7 +86,7 @@ class StudentManager {
                 return student;
             }
         }
-        return null; // Return null if student not found
+        return null; 
     }
 
     public void displayAverageGrades() {
