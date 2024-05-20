@@ -36,7 +36,7 @@ class Student implements Comparable<Student> {
         grades = new HashMap<>();
         for (String course : COURSES) {
             absences.put(course + ".Abs", 0);
-            grades.put(course, 4.0); // Initialize all grades to 4 by default
+            grades.put(course, 4.0); 
         }
     }
 
