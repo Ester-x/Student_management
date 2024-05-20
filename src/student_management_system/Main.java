@@ -66,9 +66,9 @@ public class Main {
             choice = scanner.nextInt();
         } catch (InputMismatchException e) {
             System.err.println("Invalid input. Please enter a number.");
-            scanner.nextLine(); // clear invalid input
+            scanner.nextLine(); 
         }
-        scanner.nextLine(); // consume newline
+        scanner.nextLine(); 
         return choice;
     }
 
@@ -84,7 +84,7 @@ public class Main {
             studentManager.addStudent(student);
         } catch (InputMismatchException | NumberFormatException e) {
             System.err.println("Invalid input. Please enter valid data.");
-            scanner.nextLine(); // clear invalid input
+            scanner.nextLine(); 
         }
     }
 
@@ -103,12 +103,12 @@ public class Main {
 
             System.out.println("Enter new absence count: ");
             int newAbsenceCount = scanner.nextInt();
-            scanner.nextLine(); // consume newline
+            scanner.nextLine(); 
 
             studentManager.updateAbsences(studentId, courseToUpdate, newAbsenceCount);
         } catch (InputMismatchException | NumberFormatException e) {
             System.err.println("Invalid input. Please enter valid data.");
-            scanner.nextLine(); // clear invalid input
+            scanner.nextLine(); 
         }
     }
 
@@ -122,12 +122,12 @@ public class Main {
 
             System.out.println("Enter new grade: ");
             double newGrade = scanner.nextDouble();
-            scanner.nextLine(); // consume newline
+            scanner.nextLine(); 
 
             studentManager.updateGrades(studentId, courseToUpdate, newGrade);
         } catch (InputMismatchException | NumberFormatException e) {
             System.err.println("Invalid input. Please enter valid data.");
-            scanner.nextLine(); // clear invalid input
+            scanner.nextLine(); 
         }
     }
 }
